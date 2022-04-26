@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+  
+body{
+  width:100%;
+  height:100vh;
+
+  font-family: 'Epilogue', sans-serif;
+  font-size: 18px;
+
+  background: var(--almost-white);
+}
+
+:root{
+  --almost-white: hsl(0, 0%, 98%);
+  --font-color: hsl(0, 0%, 41%);
+  --almost-black: hsl(0, 0%, 8%);
+}
+
+a{text-decoration: none;}
+li{list-style: none;}
+
+header{
+  width: 100%;
+  height: 10vh;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 4rem;
+}
+
+header a{
+  color: var(--font-color);
+  text-transform: capitalize; /*cada palavra vai começar com letra maiúscula*/
+  font-size: .8em;
+
+  transition: all .3s ease;
+}
+header a:hover{
+  color: var(--almost-black);
+}
+
+header .logo-nav{
+  display: flex;
+  align-items: center;
+}
+
+/*coloquei esse :not aqui, porque a logo ja tem um margin definido,e como é margin-left, tem ação na distância entre a logo, não é isso que eu quero*/
+/*logo a li que eu quero q tenha marign é a primeira*/
+header .logo-nav li:not(:first-child){
+  margin-left: 1rem;
+}
+header .logo-nav li a{
+  padding: 0 1em;
+}
+header .logo-nav .logo{
+  margin-right: 3rem;
+}
+
+header nav ul{
+  display: flex;
+}
+header nav ul .dropdown{
+  position: relative;
+}
+
+/*esse list é uma classe que está nos dois dropdowns, então com um bloco de estilo, consigo estilizar dois elementos diferentes*/
+header nav ul .dropdown .list{
+  position: absolute;
+  top: 1.3rem;
+  padding: 0;
+
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+
+  background: var(--almost-white);
+  box-shadow: 0 0 20px 5px rgba(0,0,0,0.1);
+  border-radius: .5rem;
+
+  transition: all .3s ease;
+  z-index: 99;
+}
+
+header nav ul .dropdown:hover .list{
+  padding: 1rem;
+
+  height: auto;
+  opacity: 1;
+}
+
+/*esse bloco de código serve para trocar a setinha no dropdown do header */
+
+header nav ul .dropdown .d1, .d2{
+  background: url(../images/icon-arrow-down.svg) no-repeat;
+
+  background-position: 100%;
+  transition: none;
+
+}
+header nav ul .dropdown:hover .d1, .d2{
+  background: url(../images/icon-arrow-up.svg) no-repeat;
+  background-position: 100%;
+
+}
+header nav ul .dropdown .d2{
+  background: url(../images/icon-arrow-down.svg) no-repeat;
+  background-position: 100%;
+
+  transition: none;
+
+}
+header nav ul .dropdown:hover .d2{
+  background: url(../images/icon-arrow-up.svg) no-repeat;
+  background-position: 100%;
+
+}
+/*esse bloco de código serve para trocar a setinha no dropdown do header */
+
+
+header nav ul .dropdown .list a{
+  padding: .7rem;
+
+}
+
+header nav ul .dropdown .listF{
+  right: 0;
+}
+
+header nav ul .dropdown .listC{
+  left: 0;
+  white-space: nowrap; /*esse atributo impede o texto nele não quebre de acordo com a largura do caointer, como não defini largura, o container vai se adaptar para mostrar*/
+}
+
+header nav ul .dropdown a{
+  display: flex;
+  align-items: center;
+  gap: .3rem;
+}
+
+header nav ul li{
+  text-align: center;
+}
+
+
+
+header .login-register .login{
+  margin-right: 2rem;
+}
+
+header .login-register .register{
+  border: 2px solid var(--almost-black);
+  border-radius: .8rem;
+
+  padding: .7rem 1.1rem;
+
+}
+
+/*=============== MAIN =====================*/
+main{
+  width: calc(100% - 8rem); /*a largura do main é difinido assim: 100% da tela, menos a soma do pedding do header, fazendo assim ficarem alinhados*/
+  height: calc(90vh - 8rem);
+
+  /*funciona assim: 4rem(padding do header) + 84px (largura da img da logo) + 3rem(margin-right da logo)*/
+  padding-left: calc(4rem + 84px + 3rem); /*esse padding funciona quase do memso modo, intuito de alinhar o header com o main*/
+  padding-top: 1rem;
+
+  display: flex;
+  gap: 5rem;
+}
+
+main section{
+  flex: 1;
+}
+
+main h1{
+  font-size: 4em;
+  line-height: 1em;
+}
+
+main .article{
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+main .paragraph{
+  padding: 4rem 0;
+}
+
+main .article .learn-more{
+  color: var(--almost-white);
+  background: var(--almost-black);
+  border: 1px solid var(--almost-black);
+  max-width: 10rem;
+
+  font: 1em;
+  font-weight: 700;
+
+  padding: 1rem 1.5rem;
+  border-radius: .8rem;
+
+  transition: all .3s ease-in-out;
+}
+main .article .learn-more:hover{
+  background: none;
+  color: var(--almost-black);
+  
+}
+
+main .clients{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main .article p{
+  font-size: 1em;
+  color: var(--font-color);
+  line-height: 1.5em;
+}
+
+main .clients img{
+  object-fit: contain;
+}
+
+main .hero-content{
+  height: 100%;
+  width: 100%;
+}
+
+main .hero-content img{
+  object-fit: contain; /*a img não vai ser cortada, assim ele vai se conter dentro do espaço disponível*/
+  width: 100%;
+  height: 100%;
+}
+
+
+footer {
+  font-size: .6em;
+  position: absolute;
+  bottom: 10px;
+  color: var(--font-color);
+  font-weight: 400;
+  text-shadow:  0 0 10px rgba(0,0,0,0.3);
+}
+footer a{
+  text-decoration: none;
+  color: white;
+  
+}
+footer a:last-child{
+  color: var(--constrast-color);
+  font-weight: 700;
+  position: relative;
+}
+
+footer a:last-child::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--constrast-color);
+
+  transition: all .3s;
+  transform-origin: center;
+}
+footer a:last-child:hover::after{
+  width: 100%;
+}
