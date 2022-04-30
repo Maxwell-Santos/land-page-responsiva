@@ -8,65 +8,67 @@
   <link rel="stylesheet" href="src/css/style.css">
   <link rel="stylesheet" href="src/css/response.css">
 
-  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  <title>Apresentation Page</title>
 </head>
 
-<body>
+<body class="">
 
   <header>
     <div class="logo-nav">
       <img src="./src/images/logo.svg" alt="logo" class="logo">
+    </div>
     
-      <nav>
+      <nav class="">
         <ul>
           <li class="dropdown">
-            <a href="" class="d1">features</a>
+            <span class="d1">features</span>
             
             <div class="listF list">
-              <a href=""> <img src="./src/images/icon-todo.svg" alt=""> todo list</a>
-              <a href=""> <img src="./src/images/icon-calendar.svg" alt=""> calendar</a>
-              <a href=""> <img src="./src/images/icon-reminders.svg" alt=""> reminders</a>
-              <a href=""> <img src="./src/images/icon-planning.svg" alt=""> planning</a>
+              <a href="#"> <img src="./src/images/icon-todo.svg" alt=""> todo list</a>
+              <a href="#"> <img src="./src/images/icon-calendar.svg" alt=""> calendar</a>
+              <a href="#"> <img src="./src/images/icon-reminders.svg" alt=""> reminders</a>
+              <a href="#"> <img src="./src/images/icon-planning.svg" alt=""> planning</a>
             </div>
           </li>
 
           <li class="dropdown">
-            <a href="" class="d2">comapny</a>
+            <span class="d2">company</span>
 
             <div class="listC list">
-              <a href="">history</a>
-              <a href="">our team</a>
-              <a href="">blog</a>
+              <a href="#">history</a>
+              <a href="#">our team</a>
+              <a href="#">blog</a>
             </div>
           </li>
 
-          <li><a href="">careers</a></li>
+          <li><span>careers</span></li>
 
-          <li><a href="">about</a></li>
+          <li><span>about</span></li>
         
         </ul>
+
+        <div class="login-register">
+          <a href="#" class="login ">login</a>
+          <a href="#" class="register">register</a>
+        </div>
       </nav>
 
-    </div>
-    
-    <div class="login-register">
-      <a href="" class="login ">login</a>
-      <a href="" class="register">register</a>
-    </div>
+      <div class="menu">
+        <img src="./src/images/icon-menu.svg" alt="menu">
+      </div>
   </header>
 
   <main>
     <section class="article">
 
-      
-      <h1>Make<br>remote work</h1>
+      <h1>Make remote work</h1>
       
       <div class="paragraph">
-        <p>Get your team in sync, no matter your location.</p>
-        <p>Streamline processes, create team rituals, and watch productivity soar</p>
+        <p>Get your team in sync, no matter your location.
+        Streamline processes, create team rituals, and watch productivity soar</p>
       </div>
 
-        <a href="" class="learn-more">Learn more</a>
+        <a href="#" class="learn-more">Learn more</a>
 
       <div class="clients">
         <img src="./src/images/client-databiz.svg" alt="client-databiz">
@@ -81,16 +83,18 @@
     </section>
 
     <section class="hero-content">
-      <img src="./src/images/image-hero-desktop.png" alt="image-hero" class="hero">
+      <img src="./src/images/image-hero-desktop.png" alt="img hero">
     </section>
   </main>
   
   <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>
-    Coded by <a href="https://github.com/Maxwell-Santos" target="_blank">Maxwell Santos</a>
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"> Frontend Mentor </a>
+    Coded by <a href="https://github.com/Maxwell-Santos" target="_blank"> Maxwell Santos </a>
   </footer>
 
   <script src="./src/script/dropdown.js"></script>
+  <script src="./src/script/change-img.js"></script>
+  <script src="./src/script/menu.js"></script>
 </body>
 
 </html>
