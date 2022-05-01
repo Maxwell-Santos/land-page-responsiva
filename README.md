@@ -33,10 +33,6 @@
 
 ### What I learned
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
 ### Javascript na responsividade
 
 <p>Para manipular o estilo da página, deixá-la responsiva, geralmente usamos as <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/Media_Queries/Using_media_queries">Media Queries</a> do css, onde se difine os breakpoints do tamanho da tela para adaptar como os ítens vão ficar distribuídos na tela</p>
