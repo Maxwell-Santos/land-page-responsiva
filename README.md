@@ -37,7 +37,7 @@
 
 <p>Para manipular o estilo da página, deixá-la responsiva, geralmente usamos as <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/Media_Queries/Using_media_queries">Media Queries</a> do css, onde se difine os breakpoints do tamanho da tela para adaptar como os ítens vão ficar distribuídos na tela</p>
 
-<p>Porém meu problema foi além de trocar estilo, e sim conteúdo de tags, no caso o src da tag img do html, logo precisei do javascript para fazer isso:</p>
+<p>Porém meu problema foi além de trocar estilo, e sim conteúdo de tags, no caso o src da tag <code>img</code> do html, logo precisei do javascript para fazer isso:</p>
 
 ```js
 let targetWindow = window.screen.width; //nessa variável, ta sendo armazenado o valor da largura da tela (number)
@@ -54,7 +54,7 @@ if (targetWindow <= 950) { //se a largura da tela for menor ou igual a 950 (como
 
 }
 ```
-<p>Chega um momento em que a tela está tão pequena, que o header ja não cabe mais, logo preciso dar um jeito de caber na tela</p>
+<p>Chega um momento em que a tela está tão pequena, que o <code>header</code> ja não cabe mais, logo preciso dar um jeito de caber na tela</p>
 
 <p>Para isso peguei uma img de menu, famoso hamburguer, e adicionei um evento ao clicar nele</p>
 
@@ -79,8 +79,8 @@ toggleMenu.addEventListener('click', () => { //quando clicar nesse elemento vai 
 })
 
 ```
-- Essa função check(), recebe como parâmetro a classe do nav e é por ela que vou animar a aparição do aside
-- São três formas que a classe do nav pode estar ao clicar no menu:
+- Essa função <code>check()</code>, recebe como parâmetro a classe do nav e é por ela que vou animar a aparição do aside
+- São três formas que a classe do <code>&ltnav&gt</code> pode estar ao clicar no menu:
 
 <ol>
   <li>class = ''</li>
