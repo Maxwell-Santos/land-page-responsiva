@@ -35,9 +35,9 @@
 
 ### Javascript na responsividade
 
-<p>Para manipular o estilo da página, deixá-la responsiva, geralmente usamos as <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/Media_Queries/Using_media_queries">Media Queries</a> do css, onde se difine os breakpoints do tamanho da tela para adaptar como os ítens vão ficar distribuídos na tela</p>
+<p>Para manipular o estilo da página, deixá-la responsiva, geralmente usamos as <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/Media_Queries/Using_media_queries">Media Queries</a> do css, onde se difine os breakpoints do tamanho da tela para adaptar como os itens vão ficar distribuídos na tela</p>
 
-<p>Porém meu problema foi além de trocar estilo, e sim conteúdo de tags, no caso o src da tag <code>img</code> do html, logo precisei do javascript para fazer isso:</p>
+<p>Porém meu problema foi além de trocar estilo, e sim conteúdo de tags, no caso o <code>src</code> da tag <code>img</code> do html, logo precisei do javascript para fazer isso:</p>
 
 ```js
 let targetWindow = window.screen.width; //nessa variável, ta sendo armazenado o valor da largura da tela (number)
@@ -79,8 +79,8 @@ toggleMenu.addEventListener('click', () => { //quando clicar nesse elemento vai 
 })
 
 ```
-- Essa função <code>check()</code>, recebe como parâmetro a classe do nav e é por ela que vou animar a aparição do aside
-- São três formas que a classe do <code>nav</code> pode estar ao clicar no menu:
+- Essa função <code>check()</code>, recebe como parâmetro a classe atual do <code>nav</code> e é por ela que vou animar a aparição do menu lateral
+- Ao disparar o evento, a <code>class</code> do <code>nav</code> terá uma dessas formas:
 
 <ol>
   <li>class = ''</li>
@@ -118,7 +118,7 @@ function check(classe) { //cada vez que clicar no menu, vai disparar essa funç�
   }
 }
 ```
-- Esse estilo que apliquei, foi só para arrumar um erro que estava acontecendo por conta da animação ao entrar no site, a lib aplica um pré estilo que estava dando conflito
+- Esse estilo que apliquei, foi só para arrumar um erro que estava acontecendo por conta da animação ao entrar no site, a biblioteca <a href='https://greensock.com/gsap/'>Gsap</a> aplica um pré estilo que estava dando conflito
 
 ```js
   button.style.zIndex = '1 | -1'
