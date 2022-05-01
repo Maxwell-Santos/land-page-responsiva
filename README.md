@@ -1,22 +1,14 @@
-# Frontend Mentor - Intro section with dropdown navigation solution
-
-This is a solution to the [Intro section with dropdown navigation challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+# Apresentation Page
 
 ## Table of contents
 
 - [Overview](#overview)
-  - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -26,8 +18,8 @@ This is a solution to the [Intro section with dropdown navigation challenge on F
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://apresentationPage.vercel.app)
+- Solution URL: [Solution](https://your-solution-url.com)
+- Live Site URL: [Site online](https://apresentationPage.vercel.app)
 
 ## My process
 
@@ -44,7 +36,6 @@ This is a solution to the [Intro section with dropdown navigation challenge on F
 ```html
 <h1>Some HTML code I'm proud of</h1>
 ```
-
 
 ### Javascript na responsividade
 
@@ -123,10 +114,11 @@ header nav.active {
 }
 
 ```
-
+### Active
 ![Active](./src/images/active%20menu.jpg)
-![!Active](./src/images/!active.jpg)
+### !Active
 
+![!Active](./src/images/!active.jpg)
 
 ## Author
 
