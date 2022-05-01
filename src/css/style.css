@@ -10,6 +10,7 @@ body{
   width:100%;
   font-family: 'Epilogue', sans-serif;
   font-size: 18px;
+  overflow-x: hidden;
 
   background: var(--almost-white);
 
@@ -191,6 +192,7 @@ main .article{
 
 main .paragraph{
   padding: 4rem 0;
+  z-index: -1;
 }
 
 main .article .learn-more{
@@ -218,6 +220,7 @@ main .clients{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: -1;
 }
 
 main .article p{
@@ -229,6 +232,8 @@ main .article p{
 main .clients img{
   object-fit: contain;
 }
+
+main .hero-content{z-index: -1;}
 
 main .hero-content img{
   width: 100%;
@@ -246,6 +251,7 @@ footer {
   justify-content: center;
   gap: .4rem;
   margin: 20px 0;
+  z-index: -1;
 }
 
 footer a{

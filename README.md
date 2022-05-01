@@ -69,47 +69,107 @@ const toggleMenu = document.querySelector('.menu img') //pegando elemento img do
 
 const aside = document.querySelector('header nav')
 const bodyActive = document.querySelector('body') //pegando a tag body
+const button = document.querySelector('.learn-more') 
 
 toggleMenu.addEventListener('click', () => { //quando clicar nesse elemento vai executar essa função
 
-  aside.classList.toggle('active') //adicionando a classe 'active' ao nav, no qual tem um estilo diferente do desktop
   bodyActive.classList.toggle('active') //add a classe 'active' ao body 
+  check(aside.classList)
 
-  if(aside.classList == 'active'){ //se a classe 'active' existir quando clicar no menu, vai mostrar a img de close
-    toggleMenu.src = './src/images/icon-close-menu.svg'
-
-  } else {
-    toggleMenu.src = './src/images/icon-menu.svg' //img do menu padrão caso a classe 'active' não existir
-
-  }
-  
 })
 
 ```
+- Essa função check(), recebe como parâmetro a classe do nav e é por ela que vou animar a aparição do aside
+- São três formas que a classe do nav pode estar ao clicar no menu:
+
+<ol>
+  <li>class = ''</li>
+  <li>class = 'active'</li>
+  <li>class = 'noshow'</li>
+</ol>
+
+```js
+function check(classe) { //cada vez que clicar no menu, vai disparar essa função
+
+  if (classe == '') {
+    toggleMenu.src = './src/images/icon-close-menu.svg'
+    classe.toggle('active') //adicionando a classe 'active' ao nav, no qual tem um estilo diferente do desktop    
+    
+    button.style.zIndex = '-1'
+
+  } else if (classe == 'active') {
+
+    classe.remove('active')
+
+    toggleMenu.src = './src/images/icon-menu.svg' //img do menu padrão caso a classe 'active' não existir
+    classe.toggle('noshow')
+
+    button.style.zIndex = '1'
+
+  } else if (classe == 'noshow') {
+
+    classe.remove('noshow')
+
+    toggleMenu.src = './src/images/icon-close-menu.svg' //img do menu padrão caso a classe 'active' não existir
+    classe.toggle('active')
+    
+    button.style.zIndex = '-1'
+
+  }
+}
+```
+- Esse estilo que apliquei, foi só para arrumar um erro que estava acontecendo por conta da animação ao entrar no site, a lib aplica um pré estilo que estava dando conflito
+
+```js
+  button.style.zIndex = '1 | -1'
+```
+
+- O efeito de vai e vem do menu é basicamente isso:
 
 ```css
-/*Active aside*/
+@keyframes show {
+  from {
+    width: 0;
+    opacity: 0;
+  }
 
-body.active {
-  overflow-y: hidden;
+  to {
+    opacity: 1;
+
+    display: block;
+    width: 240px;
+  }
 }
-/*ASIDE*/
+
+@keyframes exit{
+  from{
+    opacity: 1;
+    width: 240px;
+  }
+  to{
+    opacity: 1;
+    width: 0;
+
+  }
+}
+
 header nav.active {
   opacity: 1;
   display: block;
-  position: absolute;
-  right: 0; /*somatórias dos padding do header + o padding do nav*/
-  top: 0;
-
-  height: 100vh;
   width: 240px;
   padding: 4rem 1rem 0 1rem;
-  flex-direction: column;
-  justify-content: flex-start;
-  background: var(--almost-white);
+
+  animation: show .5s;
 }
 
+header nav.noshow{
+  display: block;
+  padding: 4rem 1rem 0 1rem;
+
+  animation: exit .5s;
+}
 ```
+
 ### Active
 ![Active](./src/images/active%20menu.jpg)
 ### !Active
@@ -118,6 +178,6 @@ header nav.active {
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/Maxwell-Santos)
+- Frontend Mentor - [@Maxwell-Santos](https://www.frontendmentor.io/profile/Maxwell-Santos)
 
 
