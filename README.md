@@ -180,4 +180,5 @@ header nav.noshow{
 
 - Frontend Mentor - [@Maxwell-Santos](https://www.frontendmentor.io/profile/Maxwell-Santos)
 
+*Para os curiosos testarem a responsividade no computador, precisa recarregar o site para trocar a img para o mobile*
 
