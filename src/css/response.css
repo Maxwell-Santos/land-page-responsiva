@@ -288,6 +288,7 @@ body.active {
 header nav.active {
   opacity: 1;
   display: block;
+  box-shadow: 0px -5px 15px rgb(0 0 0 / 20%);
   position: absolute;
   right: 0; /*somatórias dos padding do header + o padding do nav*/
   top: 0;
