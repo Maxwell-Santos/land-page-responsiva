@@ -124,8 +124,8 @@ header nav.active {
 
 ```
 
-[Active](./src/images/active%20menu.jpg)
-[!Active](./src/images/!active.jpg)
+![Active](./src/images/active%20menu.jpg)
+![!Active](./src/images/!active.jpg)
 
 
 ## Author
