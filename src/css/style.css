@@ -177,6 +177,7 @@ main h1{
   font-size: 4em;
   line-height: 1em;
   width: 93%;
+  z-index: -1;
 }
 
 main .article{
