@@ -9,7 +9,7 @@
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
 - [Author](#author)
-- [Obs](#observações)
+- [Obs](#observacoes)
 
 ## Overview
 
