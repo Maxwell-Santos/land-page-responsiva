@@ -110,6 +110,7 @@
 
 /*tratamento de erro não mexer!*/
 @media (min-width: 701px) {
+
   header nav ul .dropdown:hover .list {
     padding: 1rem;
 
@@ -123,15 +124,8 @@
     background-position: 100%;
 
   }
-  /*tornar esssas classes inexistentes para quando a tela for mais que 701px, evitando erro de responsividade*/
-  header nav.noshow{
-    display: none;
-  }
-  header nav.active{
-    display: none;
-  }
 }
-
+/*tratamento de erro não mexer*/
 
 @media (max-width: 701px) {
 
@@ -140,13 +134,31 @@
     justify-content: space-between;
   }
 
+  header nav.active {
+    opacity: 1;
+    pointer-events: all;
+    display: block;
+    width: 240px;
+    padding: 4rem 1rem 0 1rem;
+  
+    animation: show .5s;
+  }
+  
+  header nav.noshow {
+    display: block;
+    pointer-events: none;
+    padding: 4rem 1rem 0 1rem;
+  
+    animation: exit .5s;
+  }
+
   header nav {
     opacity: 0;
+    pointer-events: none;
     box-shadow: 0px -5px 15px rgb(0 0 0 / 20%);
 
     position: absolute;
     right: 0;
-    /*somatórias dos padding do header + o padding do nav*/
     top: 0;
 
     height: 100vh;
@@ -175,10 +187,10 @@
   header nav ul .dropdown .list {
     pointer-events: none;
     opacity: 0;
-    box-shadow: none;
     height: 0;
     padding: 0;
-
+    
+    box-shadow: none;
     background: var(--almost-white);
     transition: all .3s ease;
   }
@@ -245,13 +257,9 @@
     font-size: 2em;
   }
 
-  main .article {
+  main .article, main .clients {
     position: inherit;
 
-  }
-
-  main .clients {
-    position: inherit;
   }
 
 }
@@ -323,30 +331,15 @@ body.active {
   }
 }
 
-@keyframes exit{
-  from{
+@keyframes exit {
+  from {
     opacity: 1;
     width: 240px;
   }
-  to{
+
+  to {
     opacity: 1;
     width: 0;
 
   }
-}
-
-header nav.active {
-  opacity: 1;
-  display: block;
-  width: 240px;
-  padding: 4rem 1rem 0 1rem;
-
-  animation: show .5s;
-}
-
-header nav.noshow{
-  display: block;
-  padding: 4rem 1rem 0 1rem;
-
-  animation: exit .5s;
 }

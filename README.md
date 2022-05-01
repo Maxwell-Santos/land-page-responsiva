@@ -80,7 +80,7 @@ toggleMenu.addEventListener('click', () => { //quando clicar nesse elemento vai 
 
 ```
 - Essa função <code>check()</code>, recebe como parâmetro a classe do nav e é por ela que vou animar a aparição do aside
-- São três formas que a classe do <code>&ltnav&gt</code> pode estar ao clicar no menu:
+- São três formas que a classe do <code>nav</code> pode estar ao clicar no menu:
 
 <ol>
   <li>class = ''</li>

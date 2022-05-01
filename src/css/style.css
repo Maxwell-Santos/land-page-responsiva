@@ -49,7 +49,15 @@ header span:hover{
   color: var(--almost-black);
 }
 
-header nav{
+header nav.active{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+header nav.noshow{
   display: flex;
   align-items: center;
   width: 100%;
