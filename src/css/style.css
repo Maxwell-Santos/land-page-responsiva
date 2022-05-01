@@ -8,7 +8,6 @@
   
 body{
   width:100%;
-  /* height: 100vh; */
   font-family: 'Epilogue', sans-serif;
   font-size: 18px;
 
@@ -23,6 +22,8 @@ body{
 
 a{text-decoration: none;}
 li{list-style: none;}
+
+/*===============HEADER=================*/
 
 header{
   width: 100%;
@@ -153,10 +154,9 @@ header .menu{
 
 /*=============== MAIN =====================*/
 main{
-  width: calc(100% - 8rem) ; /*a largura do main é difinido assim: 100% da tela, menos a soma do pedding do header, fazendo assim ficarem alinhados*/
+  width: calc(100% - 8rem) ; /*a largura do main é difinido assim: 100% da tela, menos a soma do padding do header, fazendo assim ficarem alinhados*/
 
   height: calc(90vh - 8rem);
-  /* margin-bottom: calc( 8rem - 90vh); */
   /*funciona assim: 4rem(padding do header) + 84px (largura da img da logo) + 3rem(margin-right da logo)*/
   padding-left: calc(4rem + 84px + 3rem) ; /*esse padding funciona quase do memso modo, intuito de alinhar o header com o main*/
   padding-top: 1rem;
@@ -168,7 +168,7 @@ main{
 }
 
 main section{
-  flex: 1 !important;
+  flex: 1;
   height: 100%;
   width: 100%;
 }
@@ -184,7 +184,6 @@ main .article{
 
   flex-direction: column;
   justify-content: center;
-  /* gap: 3rem; */
   position: relative;
 
 }
@@ -237,8 +236,7 @@ main .hero-content img{
 }
 
 
-
-
+/*==========FOOTER===============*/
 footer {
   font-size: .6em;
   color: var(--font-color);
